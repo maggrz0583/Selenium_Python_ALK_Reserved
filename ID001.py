@@ -27,7 +27,6 @@ class TestRegistration(unittest.TestCase):
         # 2. Najedź na "Konto" - otwiera się menu z opcjami zalogowania/rejestracji
         profile_button = driver.find_element(By.XPATH, "/html/body/div[2]/div/div[2]/div/div[3]/div[2]")
         driver.implicitly_wait(10)
-        # profile_button.click()
         webdriver.ActionChains(driver).move_to_element(profile_button).perform()
 
         # 3. Kliknij "Zarejestruj się"
