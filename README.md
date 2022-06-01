@@ -15,6 +15,7 @@ TC5: Filtrowanie produktu (sukienek) według cech (krótki rękaw)
 
 
 **Przypadki testowe**
+
 **ID 001: **Rejestracja nowego użytkownika przy użyciu niepoprawnego adresu email
 Warunki wstępne:
 1. Otwarta strona https://www.reserved.com/pl/pl/
