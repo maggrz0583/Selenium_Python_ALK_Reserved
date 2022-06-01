@@ -24,7 +24,7 @@ class TestFilter(unittest.TestCase):
         # Zakończenie testu
         self.driver.quit()
 
-    def testBySize(self, span=None):
+    def testByPriceFilter(self, span=None):
         driver = self.driver
         # 1. Zaakceptuj popup z cookies
         driver.implicitly_wait(30)
@@ -40,14 +40,14 @@ class TestFilter(unittest.TestCase):
         sukienki = driver.find_element(By.LINK_TEXT, 'Sukienki')
         sukienki.click()
 
-        #4. Kliknij na przycisk Rozmiary
-        filter_size = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[2]/label')
-        filter_size.click()
+        #4. Kliknij na przycisk "Cena"
+        filter_price = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[4]/label')
+        filter_price.click()
 
-        #5. Zaznacz wartość "34"
-        small = driver.find_element(By.XPATH, '//*[@id="sizes-34"]')
-        small.click()
+        #5. Wpisz wartość "100" w polu "cena do"
+        one_hundred = driver.find_element(By.XPATH, '//*[@id="priceTo"]')
+        one_hundred.send_keys('100')
 
         #6. Kliknij przycisk "Filtruj"
-        size_enter = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[2]/ul/div/button')
-        size_enter.click()
+        filter_by_price_enter = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[4]/ul/div/button')
+        filter_by_price_enter.click()

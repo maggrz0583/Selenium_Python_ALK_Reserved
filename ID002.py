@@ -24,7 +24,7 @@ class TestSorting(unittest.TestCase):
         # Zakończenie testu
         self.driver.quit()
 
-    def testByPrice(self, span=None):
+    def testByPriceSorting(self, span=None):
         driver = self.driver
         # 1. Zaakceptuj popup z cookies
         driver.implicitly_wait(20)
@@ -41,8 +41,8 @@ class TestSorting(unittest.TestCase):
         sukienki.click()
 
         #4. Kliknij na przycisk Sortuj
-        sortuj = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[1]/label')
-        sortuj.click()
+        sorting_price = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[1]/label')
+        sorting_price.click()
 
         #5. Zaznacz wartość "Ceny rosnąco"
         rosnaco = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[1]/ul/li[1]/div/label')
