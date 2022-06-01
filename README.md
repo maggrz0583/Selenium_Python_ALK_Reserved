@@ -1,6 +1,8 @@
 # Selenium_Python_ALK_Reserved
 PROJEKT: AUTOMATYZACJA TESTÓW APLIKACJI WEBOWEJ W PYTHONIE
+
 Adres strony internetowej: https://www.reserved.com/pl/pl/
+
 Autor: Magdalena Niedziułka
 
 **Opis projektu:**
