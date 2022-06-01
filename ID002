@@ -1,0 +1,22 @@
+Projekt: Selenium_Python_ALK_Reserved
+
+Scenariusz testowy:
+Sortowanie produktów
+
+Przypadek testowy:
+ID 002 Sortowanie produktu (sukienek) od najniższej ceny
+
+Warunki wstępne:
+1. Otwarta strona https://www.reserved.com/pl/pl/
+
+Kroki:
+1. Zaakceptuj pop-up dotyczący cookies
+2. W Menu głównym najedź kursorem na pozycję "Kobieta"
+3. W rozwinietym podmenu kliknij na pozycję "Sukienki"
+4. Kliknij na przycisk Sortuj
+5. Zaznacz wartość "Ceny rosnąco"
+6. Kliknij przycisk "Sortuj"
+
+Oczekiwany rezultat:
+1. System wyświetla listę produktów posortowanych od najniższej do najwyższej ceny
+2. Przeglądarka zostaje wyłaczona
