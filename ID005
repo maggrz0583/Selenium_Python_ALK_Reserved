@@ -1,7 +1,7 @@
 Projekt: Selenium_Python_ALK_Reserved
 
 Scenariusz testowy:
-Sortowanie produktów
+Filtrowanie produktów
 
 Przypadek testowy:
 ID 005 Filtrowanie produktu (sukienek) według cech (krótki rękaw)
