@@ -24,7 +24,7 @@ class TestFilter(unittest.TestCase):
         # Zakończenie testu
         self.driver.quit()
 
-    def testBySize(self, span=None):
+    def testByFeatureFilter(self, span=None):
         driver = self.driver
         # 1. Zaakceptuj popup z cookies
         accept_btn = driver.find_element(By.ID,"cookiebotDialogOkButton")
@@ -38,14 +38,14 @@ class TestFilter(unittest.TestCase):
         sukienki = driver.find_element(By.LINK_TEXT, 'Sukienki')
         sukienki.click()
 
-        #4. Kliknij na przycisk Rozmiary
-        filter_size = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[2]/label')
-        filter_size.click()
+        #4. Kliknij na przycisk "Cechy"
+        filter_feature = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[5]/label')
+        filter_feature.click()
 
-        #5. Zaznacz wartość "34"
-        small = driver.find_element(By.XPATH, '//*[@id="sizes-34"]')
-        small.click()
+        #5. Zaznacz wartość "krótki rękaw"
+        short_sleeve = driver.find_element(By.XPATH, '//*[@id="features-52"]')
+        short_sleeve.click()
 
         #6. Kliknij przycisk "Filtruj"
-        size_enter = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[2]/ul/div/button')
-        size_enter.click()
+        filter_by_feature_enter = driver.find_element(By.XPATH, '//*[@id="categoryFilters"]/form/div/div[5]/ul/div/button')
+        filter_by_feature_enter.click()

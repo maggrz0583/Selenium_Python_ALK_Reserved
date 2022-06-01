@@ -18,7 +18,7 @@ class TestFilter(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get("https://www.reserved.com/pl/pl/")
-
+        self.driver.implicitly_wait(30)
 
     def tearDown(self):
         # Zakończenie testu
@@ -27,13 +27,11 @@ class TestFilter(unittest.TestCase):
     def testByPriceFilter(self, span=None):
         driver = self.driver
         # 1. Zaakceptuj popup z cookies
-        driver.implicitly_wait(30)
         accept_btn = driver.find_element(By.ID,"cookiebotDialogOkButton")
         accept_btn.click()
 
         #2. W Menu głównym najedź na pozycję "Kobieta"
         kobieta = driver.find_element(By.XPATH, '//*[@id="navigation-wrapper"]/div/ul/li[2]/a')
-        driver.implicitly_wait(30)
         webdriver.ActionChains(driver).move_to_element(kobieta).perform()
 
         #3. W rozwinietym podmenu kliknij na pozycję "Sukienki"

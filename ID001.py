@@ -12,6 +12,7 @@ class TestRegistration(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get("https://www.reserved.com/pl/pl/")
+        self.driver.implicitly_wait(30)
 
     def tearDown(self):
         # Zakończenie testu
@@ -20,13 +21,11 @@ class TestRegistration(unittest.TestCase):
     def testInvalidEmail(self, span=None):
         driver = self.driver
         # 1. Zaakceptuj popup z cookies
-        driver.implicitly_wait(15)
         accept_btn = driver.find_element(By.ID, "cookiebotDialogOkButton")
         accept_btn.click()
 
         # 2. Najedź na "Konto" - otwiera się menu z opcjami zalogowania/rejestracji
         profile_button = driver.find_element(By.XPATH, "/html/body/div[2]/div/div[2]/div/div[3]/div[2]")
-        driver.implicitly_wait(10)
         webdriver.ActionChains(driver).move_to_element(profile_button).perform()
 
         # 3. Kliknij "Zarejestruj się"
