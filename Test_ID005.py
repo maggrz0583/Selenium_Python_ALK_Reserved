@@ -35,7 +35,7 @@ class TestFilter(unittest.TestCase):
         webdriver.ActionChains(driver).move_to_element(kobieta).perform()
 
         #3. W rozwinietym podmenu kliknij na pozycję "Sukienki"
-        sukienki = driver.find_element(By.LINK_TEXT, 'Sukienki')
+        sukienki = driver.find_element(By.XPATH, '//a[text()="Sukienki"]')
         sukienki.click()
 
         #4. Kliknij na przycisk "Cechy"
