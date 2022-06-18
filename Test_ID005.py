@@ -31,7 +31,7 @@ class TestFilter(unittest.TestCase):
         accept_btn.click()
 
         #2. W Menu głównym najedź na pozycję "Kobieta"
-        kobieta = driver.find_element(By.XPATH, '//*[@id="navigation-wrapper"]/div/ul/li[2]/a')
+        kobieta = driver.find_element(By.XPATH, '//a[text()="kobieta"]')
         webdriver.ActionChains(driver).move_to_element(kobieta).perform()
 
         #3. W rozwinietym podmenu kliknij na pozycję "Sukienki"
